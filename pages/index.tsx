@@ -39,12 +39,12 @@ const Home = ({quranChapters }:HomeProps) => {
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
         <h1 className="text-6xl font-bold">
           Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
+          <a className="text-green-400" href="#">
             HOLY QURAN WEB APP!
           </a>
         </h1>
 
-        <h2>
+        <h2 className='text-2xl'>
           Chapters
         </h2>
 
@@ -53,7 +53,7 @@ const Home = ({quranChapters }:HomeProps) => {
 
      
           {quranChapters.map((chapter, index) => (
-            <ChapterCard key={index} surah={chapter.name_simple} englishName={chapter.translated_name.name }/>
+            <ChapterCard key={index} surah={chapter.name_simple} id={chapter.id }englishName={chapter.translated_name.name }/>
           ))}
 
         </div>
